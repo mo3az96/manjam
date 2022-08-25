@@ -1957,6 +1957,42 @@ html[dir=ltr] .checkout-input[type=email]::placeholder {
   background-position: 100% 0;
 }
 
+.enroll-success-cont {
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 100px;
+  color: #23bc09;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.success-msg {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin: 0;
+}
+.success-msg strong {
+  color: var(--secondery-color);
+  font-weight: 700;
+  margin: 10px 0;
+  display: block;
+}
+
+.enroll-success-btn {
+  font-size: 14px;
+  margin: 35px auto 0;
+  width: 181px;
+  height: 42px;
+  background-image: linear-gradient(to right, var(--gradient-one), var(--gradient-two), var(--gradient-two), var(--gradient-one));
+}
+.enroll-success-btn:hover {
+  background-position: 100% 0;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media (max-width: 991px) {
   .header-navbar {
