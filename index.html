@@ -16,7 +16,19 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target="#fixedNavbar">
+  <body data-bs-spy="scroll" data-bs-target="#fixedNavbar" class="overflow">
+    <div class="prelader">
+      <div class="preloader-flex">
+        <div class="preloader-logo-cont">
+          <div class="colored">
+            <img src="images/logo.png" class="img-fluid" />
+          </div>
+          <div class="filterd">
+            <img src="images/logo.png" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Start Header -->
     <header id="header">
       <div class="container">
@@ -442,7 +454,9 @@
     <section id="testimonials" class="testimonials-section">
       <div class="container">
         <div class="testimonials-cont">
-          <h3 class="section-title" data-sal="slide-up">ماذا قال عني المتدربين السابقين</h3>
+          <h3 class="section-title" data-sal="slide-up">
+            ماذا قال عني المتدربين السابقين
+          </h3>
           <div class="testimonials-slider">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -534,7 +548,11 @@
           <div class="accordian-cont">
             <h3 class="section-title" data-sal="slide-up">الأسئلة الشائعة</h3>
             <div class="accordion faq-accordion" id="accordionFAQ">
-              <div class="accordion-item faq-item" data-sal="slide-up" style="--sal-delay: 0.2s">
+              <div
+                class="accordion-item faq-item"
+                data-sal="slide-up"
+                style="--sal-delay: 0.2s"
+              >
                 <h2 class="accordion-header faq-header">
                   <button
                     class="accordion-button faq-button collapsed"
@@ -566,7 +584,11 @@
                 </div>
               </div>
 
-              <div class="accordion-item faq-item" data-sal="slide-up" style="--sal-delay: 0.4s">
+              <div
+                class="accordion-item faq-item"
+                data-sal="slide-up"
+                style="--sal-delay: 0.4s"
+              >
                 <h2 class="accordion-header faq-header">
                   <button
                     class="accordion-button faq-button collapsed"
@@ -609,10 +631,18 @@
         <h2 class="newsletter-title" data-sal="slide-up">
           تعلم كيفية جمع بيانات العملاء وتحليلها لزيادة المبيعات
         </h2>
-        <h4 class="newsletter-subtitle" data-sal="slide-up" style="--sal-delay: 0.2s">
+        <h4
+          class="newsletter-subtitle"
+          data-sal="slide-up"
+          style="--sal-delay: 0.2s"
+        >
           اشترك بالنشرة لتكون أول من يعرف عن تحديثات الورشة
         </h4>
-        <div class="newsletter-form" data-sal="slide-up" style="--sal-delay: 0.4s">
+        <div
+          class="newsletter-form"
+          data-sal="slide-up"
+          style="--sal-delay: 0.4s"
+        >
           <input
             type="email"
             class="newsletter-input"

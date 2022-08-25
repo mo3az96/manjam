@@ -1,6 +1,10 @@
 $(window).on("load", function () {
-  sal({
-    once: true,
+  $(".prelader").fadeOut("500", function () {
+    $(this).remove();
+    sal({
+      once: true,
+    });
+    $("body").removeClass("overflow");
   });
 
   if ($(window).width() <= 991) {
