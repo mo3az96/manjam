@@ -1,12 +1,18 @@
 $(window).on("load", function () {
-  $("body").removeClass("overflow");
+  sal({
+    once: true,
+  });
+
+  if ($(window).width() <= 991) {
+    $("*").removeAttr("data-sal");
+  }
 });
 $(document).ready(function () {
   /***** Navbar *****/
   new bootstrap.ScrollSpy(document.body, {
     target: "#fixedNavbar",
   });
-  $(".animated-acroll").on("click", function (e) {
+  $(".animated-scroll").on("click", function (e) {
     e.preventDefault();
     var hash = this.hash;
     $("html, body").animate(
@@ -18,8 +24,26 @@ $(document).ready(function () {
         window.location.hash = hash;
       }
     );
+    if ($(window).width() <= 991) {
+      $(".navbar").fadeOut(300);
+      $(".overlay").fadeOut(300);
+      $(".header-nav").removeClass("active");
+      $("body").removeClass("overflow");
+    }
   });
 
+  $(".menu-btn").on("click", function (e) {
+    $(".navbar").fadeIn(300);
+    $(".overlay").fadeIn(300);
+    $(".header-nav").addClass("active");
+    $("body").addClass("overflow");
+  });
+  $(".close-btn,.overlay").on("click", function (e) {
+    $(".navbar").fadeOut(300);
+    $(".overlay").fadeOut(300);
+    $(".header-nav").removeClass("active");
+    $("body").removeClass("overflow");
+  });
   /***** Header *****/
   var prevScroll = $(window).scrollTop();
 
@@ -38,7 +62,6 @@ $(document).ready(function () {
       (prevScroll = currentScroll);
   });
 
-  
   /***** testimonials slider *****/
   var testimonialsSwiper = new Swiper(".testimonials-slider .swiper", {
     loop: true,
@@ -68,5 +91,20 @@ $(document).ready(function () {
         spaceBetween: 30,
       },
     },
+  });
+
+  /***** Arrow *****/
+  $(window).scroll(function () {
+    $(this).scrollTop() >= 500
+      ? $(".scroll-up").fadeIn(500)
+      : $(".scroll-up").fadeOut(500);
+  });
+  $(".scroll-up").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
   });
 });

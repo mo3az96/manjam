@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/line-awesome.css" />
+    <link rel="stylesheet" href="css/sal.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -25,41 +26,52 @@
               <img src="images/logo.png" class="img-fluid" />
             </a>
             <div class="coach-name-cont">
-              <a class="animated-acroll coach-name" href="#main"
-                >نـدى العُـمري</a
-              >
+              <a class="animated-scroll coach-name" href="#main">
+                نـدى العُـمري
+              </a>
             </div>
           </div>
           <nav class="navbar header-navbar" id="fixedNavbar">
             <ul class="nav nav-pills header-nav">
+              <li class="nav-head">
+                <button class="close-btn">
+                  <i class="las la-times"></i>
+                </button>
+              </li>
               <li class="nav-item">
-                <a class="nav-link animated-acroll" href="#content">
+                <a class="nav-link animated-scroll" href="#content">
                   المحتوى
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link animated-acroll" href="#about">
+                <a class="nav-link animated-scroll" href="#about">
                   عن المدرب
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link animated-acroll" href="#features">
+                <a class="nav-link animated-scroll" href="#features">
                   المزايا
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link animated-acroll" href="#testimonials">
+                <a class="nav-link animated-scroll" href="#testimonials">
                   اراء العملاء
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link animated-acroll" href="#faq">
+                <a class="nav-link animated-scroll" href="#faq">
                   الأسئلة الشائعة
                 </a>
               </li>
+              <li class="lang-cont">
+                <a href="en/index.html" class="lang">English</a>
+              </li>
             </ul>
           </nav>
-          <a href="en/index.html" class="lang">English</a>
+          <div class="overlay"></div>
+          <button class="menu-btn">
+            <i class="las la-bars"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -71,13 +83,17 @@
         <div class="main-cont">
           <div class="main-info">
             <div class="main-text">
-              <h5 class="main-subtitle">ورشة عمل بعنوان</h5>
-              <h1 class="main-title">
+              <h5 class="main-subtitle" data-sal="slide-up">ورشة عمل بعنوان</h5>
+              <h1
+                class="main-title"
+                data-sal="slide-up"
+                style="--sal-delay: 0.2s"
+              >
                 كيفية جمع بيانات العملاء وتحليلها لزيادة المبيعات (تطبيق عملي
                 على بيانات مشروع متجر)
               </h1>
             </div>
-            <div class="main-img">
+            <div class="main-img" data-sal="zoom-in">
               <div class="main-img-aspect">
                 <div class="img-here">
                   <img src="images/coach.jpg" class="img-fluid" />
@@ -86,7 +102,7 @@
             </div>
           </div>
           <div class="info-list">
-            <div class="info-item">
+            <div class="info-item" data-sal="flip-up">
               <div class="item-icon">
                 <i class="las la-tags"></i>
               </div>
@@ -95,7 +111,7 @@
                 <strong>ورشة عمل</strong>
               </div>
             </div>
-            <div class="info-item">
+            <div class="info-item" data-sal="flip-up" style="--sal-delay: 0.4s">
               <div class="item-icon">
                 <i class="las la-border-all"></i>
               </div>
@@ -104,7 +120,7 @@
                 <strong>التسويق الإلكتروني</strong>
               </div>
             </div>
-            <div class="info-item">
+            <div class="info-item" data-sal="flip-up" style="--sal-delay: 0.4s">
               <div class="item-icon">
                 <i class="las la-list"></i>
               </div>
@@ -113,7 +129,7 @@
                 <strong>10</strong>
               </div>
             </div>
-            <div class="info-item">
+            <div class="info-item" data-sal="flip-up" style="--sal-delay: 0.6s">
               <div class="item-icon">
                 <i class="las la-calendar"></i>
               </div>
@@ -122,7 +138,7 @@
                 <strong>2022-09-01</strong>
               </div>
             </div>
-            <div class="info-item">
+            <div class="info-item" data-sal="flip-up" style="--sal-delay: 0.8s">
               <div class="item-icon">
                 <i class="las la-play-circle"></i>
               </div>
@@ -133,7 +149,7 @@
             </div>
           </div>
           <a href="#!" class="subscribe manjam-btn">اشترك الآن</a>
-          <a href="#content" class="animated-acroll scroll-down-btn">
+          <a href="#content" class="animated-scroll scroll-down-btn">
             <i class="las la-angle-double-down"></i>
           </a>
         </div>
@@ -146,30 +162,46 @@
       <section class="services-section">
         <div class="container">
           <div class="services-cont">
-            <h3 class="section-title">ماذا سأقدم؟</h3>
+            <h3 class="section-title" data-sal="slide-up">ماذا سأقدم؟</h3>
             <div class="services-grid">
-              <div class="service-item">
+              <div
+                class="service-item"
+                data-sal="zoom-out"
+                style="--sal-delay: 0.2s"
+              >
                 <h6 class="item-title">جمع البيانات</h6>
                 <p class="item-desc">
                   تعلّم كيفية جميع بيانات العملاء في كل مرحلة من مراحل المشروع
                   وماهو الإختلاف بين كل مرحلة و أخرى
                 </p>
               </div>
-              <div class="service-item">
+              <div
+                class="service-item"
+                data-sal="zoom-out"
+                style="--sal-delay: 0.4s"
+              >
                 <h6 class="item-title">تحليل بيانات العملاء</h6>
                 <p class="item-desc">
                   تعلّم كيفية فهم و تحليل سلوك العميل من خلال البيانات التي تم
                   جمعها وكيف يمكنك اتخاذ القرارات التسويقية
                 </p>
               </div>
-              <div class="service-item">
+              <div
+                class="service-item"
+                data-sal="zoom-out"
+                style="--sal-delay: 0.6s"
+              >
                 <h6 class="item-title">زيادة المبيعات</h6>
                 <p class="item-desc">
                   تعلّم من خلال نتائج تحليل البيانات رسم الخطط و تغيير و تجديد
                   الأدوات الترويجية وكيفية زيادة المبيعات من خلالها
                 </p>
               </div>
-              <div class="service-item">
+              <div
+                class="service-item"
+                data-sal="zoom-out"
+                style="--sal-delay: 0.8s"
+              >
                 <h6 class="item-title">تطوير المشروع</h6>
                 <p class="item-desc">
                   تعلّم كيفية الاستفادة من هذه البيانات لتجديد و تغيير
@@ -183,17 +215,25 @@
       <section class="whoNeedThis-section">
         <div class="container">
           <div class="whoNeedThis-cont">
-            <h3 class="section-title">من يحتاج هذه الورشة؟</h3>
+            <h3 class="section-title" data-sal="slide-up">
+              من يحتاج هذه الورشة؟
+            </h3>
             <ul class="list-unstyled whoNeedThis-list">
-              <li>أصحاب المشاريع الناشئة والمتاجر الإلكترونية</li>
-              <li>موظفي إدارات التسويق في الشركات</li>
-              <li>طلاب وطالبات التسويق</li>
-              <li>
+              <li data-sal="flip-up" style="--sal-delay: 0.2s">
+                أصحاب المشاريع الناشئة والمتاجر الإلكترونية
+              </li>
+              <li data-sal="flip-up" style="--sal-delay: 0.4s">
+                موظفي إدارات التسويق في الشركات
+              </li>
+              <li data-sal="flip-up" style="--sal-delay: 0.6s">
+                طلاب وطالبات التسويق
+              </li>
+              <li data-sal="flip-up" style="--sal-delay: 0.8s">
                 الخريجيين والخريجات في تخصص التسويق والمقبلين على سوق العمل
               </li>
             </ul>
             <div class="banner">
-              <h4 class="banner-title">
+              <h4 class="banner-title" data-sal="slide-up">
                 سجل بالورشة وزد خبرتك بمجال التسويق وسوق العمل
               </h4>
               <a href="#!" class="banner-btn manjam-btn"> اعرف تفاصيل اكثر </a>
@@ -204,15 +244,21 @@
       <section class="whatwillwYouLearn-section">
         <div class="container">
           <div class="whatwillwYouLearn-cont">
-            <h3 class="section-title">ماذا ستتعلم في ورشة العمل؟</h3>
+            <h3 class="section-title" data-sal="slide-up">
+              ماذا ستتعلم في ورشة العمل؟
+            </h3>
             <div class="whatwillwYouLearn-grid">
-              <div class="whatwillwYouLearn-item">
+              <div class="whatwillwYouLearn-item" data-sal="slide-down">
                 <div class="icon">
                   <i class="las la-chart-pie"></i>
                 </div>
                 <p class="text">كيفية جمع البيانات وتحليها</p>
               </div>
-              <div class="whatwillwYouLearn-item">
+              <div
+                class="whatwillwYouLearn-item"
+                data-sal="slide-down"
+                style="--sal-delay: 0.2s"
+              >
                 <div class="icon">
                   <i class="las la-laptop-code"></i>
                 </div>
@@ -220,19 +266,31 @@
                   معرفة أهم و أفضل الأدوات التقنية لجمع البيانات وتحليلها
                 </p>
               </div>
-              <div class="whatwillwYouLearn-item">
+              <div
+                class="whatwillwYouLearn-item"
+                data-sal="slide-down"
+                style="--sal-delay: 0.4s"
+              >
                 <div class="icon">
                   <i class="las la-user-friends"></i>
                 </div>
                 <p class="text">معرفة جمهورك المستهدف بشكل دقيق</p>
               </div>
-              <div class="whatwillwYouLearn-item">
+              <div
+                class="whatwillwYouLearn-item"
+                data-sal="slide-down"
+                style="--sal-delay: 0.6s"
+              >
                 <div class="icon">
                   <i class="las la-user-tie"></i>
                 </div>
                 <p class="text">كيفية فهم سلوك العميل</p>
               </div>
-              <div class="whatwillwYouLearn-item">
+              <div
+                class="whatwillwYouLearn-item"
+                data-sal="slide-down"
+                style="--sal-delay: 0.8s"
+              >
                 <div class="icon">
                   <i class="las la-suitcase"></i>
                 </div>
@@ -245,8 +303,16 @@
         </div>
       </section>
       <section class="dontMiss-section">
-        <h2 class="dontMiss-title">لا تفوت فرصة فهمك لعملائك المحتملين</h2>
-        <h5 class="dontMiss-subtitle">سجل لتتعلم كيف تزيد من مبيعاتك</h5>
+        <h2 class="dontMiss-title" data-sal="slide-up">
+          لا تفوت فرصة فهمك لعملائك المحتملين
+        </h2>
+        <h5
+          class="dontMiss-subtitle"
+          data-sal="slide-up"
+          style="--sal-delay: 0.2s"
+        >
+          سجل لتتعلم كيف تزيد من مبيعاتك
+        </h5>
         <a href="#!" class="dontMiss-btn manjam-btn"> سجل الآن </a>
       </section>
     </section>
@@ -256,9 +322,9 @@
     <section id="about" class="about-section">
       <div class="container">
         <div class="about-cont">
-          <h3 class="section-title">نبذة عن المدرب</h3>
+          <h3 class="section-title" data-sal="slide-up">نبذة عن المدرب</h3>
           <div class="about-flex">
-            <div class="about-img">
+            <div class="about-img" data-sal="zoom-in" style="--sal-delay: 0.2s">
               <div class="about-img-aspect">
                 <div class="img-here">
                   <img src="images/coach.jpg" class="img-fluid" />
@@ -266,12 +332,26 @@
               </div>
             </div>
             <div class="about-info">
-              <h4 class="about-name">ندى العُمري</h4>
-              <p class="about-summary">
+              <h4
+                class="about-name"
+                data-sal="slide-up"
+                style="--sal-delay: 0.2s"
+              >
+                ندى العُمري
+              </h4>
+              <p
+                class="about-summary"
+                data-sal="slide-up"
+                style="--sal-delay: 0.4s"
+              >
                 أخصائي تسويق استراتيجي، مستشار تسويقي لعدة جهات ومشاريع، خبرة 10
                 سنوات في مجال التسويق، مؤسس وكالة قوق للتسويق
               </p>
-              <div class="about-socials">
+              <div
+                class="about-socials"
+                data-sal="slide-up"
+                style="--sal-delay: 0.4s"
+              >
                 <a href="#!" class="telegram">
                   <div class="lab la-telegram"></div>
                 </a>
@@ -296,9 +376,9 @@
     <section id="features" class="features-section">
       <div class="container">
         <div class="about-cont">
-          <h3 class="section-title">المزايا</h3>
+          <h3 class="section-title" data-sal="slide-up">المزايا</h3>
           <div class="feats-grid">
-            <div class="feat-item">
+            <div class="feat-item" data-sal="zoom-in" style="--sal-delay: 0.2s">
               <div class="feat-icon">
                 <i class="las la-rocket"></i>
               </div>
@@ -307,7 +387,7 @@
                 المشاهدة السلبية
               </p>
             </div>
-            <div class="feat-item">
+            <div class="feat-item" data-sal="zoom-in" style="--sal-delay: 0.4s">
               <div class="feat-icon">
                 <i class="las la-dharmachakra"></i>
               </div>
@@ -316,7 +396,7 @@
                 المشاهدة السلبية
               </p>
             </div>
-            <div class="feat-item">
+            <div class="feat-item" data-sal="zoom-in" style="--sal-delay: 0.6s">
               <div class="feat-icon">
                 <i class="las la-microphone"></i>
               </div>
@@ -325,7 +405,7 @@
                 المشاهدة السلبية
               </p>
             </div>
-            <div class="feat-item">
+            <div class="feat-item" data-sal="zoom-in" style="--sal-delay: 0.6s">
               <div class="feat-icon">
                 <i class="las la-certificate"></i>
               </div>
@@ -334,7 +414,7 @@
                 المشاهدة السلبية
               </p>
             </div>
-            <div class="feat-item">
+            <div class="feat-item" data-sal="zoom-in" style="--sal-delay: 0.4s">
               <div class="feat-icon">
                 <i class="las la-puzzle-piece"></i>
               </div>
@@ -343,7 +423,7 @@
                 المشاهدة السلبية
               </p>
             </div>
-            <div class="feat-item">
+            <div class="feat-item" data-sal="zoom-in" style="--sal-delay: 0.2s">
               <div class="feat-icon">
                 <i class="las la-comment-alt"></i>
               </div>
@@ -362,7 +442,7 @@
     <section id="testimonials" class="testimonials-section">
       <div class="container">
         <div class="testimonials-cont">
-          <h3 class="section-title">ماذا قال عني المتدربين السابقين</h3>
+          <h3 class="section-title" data-sal="slide-up">ماذا قال عني المتدربين السابقين</h3>
           <div class="testimonials-slider">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -452,9 +532,9 @@
       <section class="accordion-section">
         <div class="container">
           <div class="accordian-cont">
-            <h3 class="section-title">الأسئلة الشائعة</h3>
+            <h3 class="section-title" data-sal="slide-up">الأسئلة الشائعة</h3>
             <div class="accordion faq-accordion" id="accordionFAQ">
-              <div class="accordion-item faq-item">
+              <div class="accordion-item faq-item" data-sal="slide-up" style="--sal-delay: 0.2s">
                 <h2 class="accordion-header faq-header">
                   <button
                     class="accordion-button faq-button collapsed"
@@ -486,7 +566,7 @@
                 </div>
               </div>
 
-              <div class="accordion-item faq-item">
+              <div class="accordion-item faq-item" data-sal="slide-up" style="--sal-delay: 0.4s">
                 <h2 class="accordion-header faq-header">
                   <button
                     class="accordion-button faq-button collapsed"
@@ -526,13 +606,13 @@
         </div>
       </section>
       <section class="newsletter-section">
-        <h2 class="newsletter-title">
+        <h2 class="newsletter-title" data-sal="slide-up">
           تعلم كيفية جمع بيانات العملاء وتحليلها لزيادة المبيعات
         </h2>
-        <h4 class="newsletter-subtitle">
+        <h4 class="newsletter-subtitle" data-sal="slide-up" style="--sal-delay: 0.2s">
           اشترك بالنشرة لتكون أول من يعرف عن تحديثات الورشة
         </h4>
-        <div class="newsletter-form">
+        <div class="newsletter-form" data-sal="slide-up" style="--sal-delay: 0.4s">
           <input
             type="email"
             class="newsletter-input"
@@ -546,11 +626,15 @@
 
     <!-- Start Footer -->
     <footer>© منصة منجم 2022. جميع الحقوق محفوظة</footer>
+    <a href="#header" class="scroll-up animated-scroll">
+      <i class="las la-arrow-up"></i>
+    </a>
     <!-- End Footer -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/sal.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
