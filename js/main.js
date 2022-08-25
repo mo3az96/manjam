@@ -4,7 +4,7 @@ $(window).on("load", function () {
     sal({
       once: true,
     });
-    $("body").removeClass("overflow");
+    $("html").removeClass("overflow");
   });
 
   if ($(window).width() <= 991) {
@@ -16,7 +16,7 @@ $(document).ready(function () {
   new bootstrap.ScrollSpy(document.body, {
     target: "#fixedNavbar",
   });
-  $(".animated-scroll").on("click", function (e) {
+  $(".animated-scroll[href^='#']").on("click", function (e) {
     e.preventDefault();
     var hash = this.hash;
     $("html, body").animate(
@@ -32,7 +32,7 @@ $(document).ready(function () {
       $(".navbar").fadeOut(300);
       $(".overlay").fadeOut(300);
       $(".header-nav").removeClass("active");
-      $("body").removeClass("overflow");
+      $("html").removeClass("overflow");
     }
   });
 
@@ -40,13 +40,13 @@ $(document).ready(function () {
     $(".navbar").fadeIn(300);
     $(".overlay").fadeIn(300);
     $(".header-nav").addClass("active");
-    $("body").addClass("overflow");
+    $("html").addClass("overflow");
   });
   $(".close-btn,.overlay").on("click", function (e) {
     $(".navbar").fadeOut(300);
     $(".overlay").fadeOut(300);
     $(".header-nav").removeClass("active");
-    $("body").removeClass("overflow");
+    $("html").removeClass("overflow");
   });
   /***** Header *****/
   var prevScroll = $(window).scrollTop();

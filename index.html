@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html dir="rtl" lang="ar" class="overflow">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target="#fixedNavbar" class="overflow">
+  <body data-bs-spy="scroll" data-bs-target="#fixedNavbar">
     <div class="prelader">
       <div class="preloader-flex">
         <div class="preloader-logo-cont">
@@ -254,26 +254,33 @@
               <h4 class="banner-title" data-sal="slide-up">
                 سجل بالورشة وزد خبرتك بمجال التسويق وسوق العمل
               </h4>
-              <a href="#!" class="banner-btn manjam-btn"> اعرف تفاصيل اكثر </a>
+              <a
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#joinModal"
+                class="banner-btn manjam-btn"
+              >
+                اعرف تفاصيل اكثر
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="whatwillwYouLearn-section">
+      <section class="whatwillYouLearn-section">
         <div class="container">
-          <div class="whatwillwYouLearn-cont">
+          <div class="whatwillYouLearn-cont">
             <h3 class="section-title" data-sal="slide-up">
               ماذا ستتعلم في ورشة العمل؟
             </h3>
-            <div class="whatwillwYouLearn-grid">
-              <div class="whatwillwYouLearn-item" data-sal="slide-down">
+            <div class="whatwillYouLearn-grid">
+              <div class="whatwillYouLearn-item" data-sal="slide-down">
                 <div class="icon">
                   <i class="las la-chart-pie"></i>
                 </div>
                 <p class="text">كيفية جمع البيانات وتحليها</p>
               </div>
               <div
-                class="whatwillwYouLearn-item"
+                class="whatwillYouLearn-item"
                 data-sal="slide-down"
                 style="--sal-delay: 0.2s"
               >
@@ -285,7 +292,7 @@
                 </p>
               </div>
               <div
-                class="whatwillwYouLearn-item"
+                class="whatwillYouLearn-item"
                 data-sal="slide-down"
                 style="--sal-delay: 0.4s"
               >
@@ -295,7 +302,7 @@
                 <p class="text">معرفة جمهورك المستهدف بشكل دقيق</p>
               </div>
               <div
-                class="whatwillwYouLearn-item"
+                class="whatwillYouLearn-item"
                 data-sal="slide-down"
                 style="--sal-delay: 0.6s"
               >
@@ -305,7 +312,7 @@
                 <p class="text">كيفية فهم سلوك العميل</p>
               </div>
               <div
-                class="whatwillwYouLearn-item"
+                class="whatwillYouLearn-item"
                 data-sal="slide-down"
                 style="--sal-delay: 0.8s"
               >
@@ -331,7 +338,14 @@
         >
           سجل لتتعلم كيف تزيد من مبيعاتك
         </h5>
-        <a href="#!" class="dontMiss-btn manjam-btn"> سجل الآن </a>
+        <a
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#joinModal"
+          class="dontMiss-btn manjam-btn"
+        >
+          سجل الآن
+        </a>
       </section>
     </section>
     <!-- End Content -->
