@@ -160,7 +160,13 @@
               </div>
             </div>
           </div>
-          <a href="#!" class="subscribe manjam-btn">اشترك الآن</a>
+          <a
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#joinModal"
+            class="subscribe manjam-btn"
+            >اشترك الآن</a
+          >
           <a href="#content" class="animated-scroll scroll-down-btn">
             <i class="las la-angle-double-down"></i>
           </a>
@@ -660,6 +666,124 @@
       <i class="las la-arrow-up"></i>
     </a>
     <!-- End Footer -->
+
+    <!-- Start JoinModal -->
+    <div class="modal fade" id="joinModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">اختر وسيلة التحقق</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="las la-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs join-tabs" id="joinTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#mobile-tab-pane"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  <i class="las la-mobile"></i>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#mail-tab-pane"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  <i class="las la-envelope"></i>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="joinTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="mobile-tab-pane"
+                role="tabpanel"
+              >
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    placeholder="رقم الجوال*"
+                    class="modal-input"
+                  />
+                  <span class="input-hint">
+                    مثال: <span class="en">5xxxxxxxx</span>
+                  </span>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="mail-tab-pane" role="tabpanel">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    placeholder="البريد الإلكتروني*"
+                    class="modal-input"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="modal-btn"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#OTPModal"
+            >
+              ارسال
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End JoinModal -->
+
+    <!-- Start OTPModal -->
+    <div class="modal fade" id="OTPModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ادخل رمز التحقق المرسل إلى رقم جوالك</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="las la-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <input
+                type="number"
+                placeholder="ادخل رمز التحقق"
+                class="modal-input"
+              />
+            </div>
+            <div class="count-down">
+              إعادة الارسال بعد <span class="counter">01:59</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="modal-btn" href="checkout.html"> ارسال </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End OTPModal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
