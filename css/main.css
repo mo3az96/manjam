@@ -141,11 +141,11 @@ section.whoNeedThis-section {
     padding-bottom: 75px;
   }
 }
-section.whatwillwYouLearn-section {
+section.whatwillYouLearn-section {
   padding-bottom: 108px;
 }
 @media (max-width: 991px) {
-  section.whatwillwYouLearn-section {
+  section.whatwillYouLearn-section {
     padding-bottom: 75px;
   }
 }
